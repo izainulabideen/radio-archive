@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { hero } from "../assets/images";
 
 function Hero() {
@@ -8,12 +9,12 @@ function Hero() {
           Preserving Radio Heritage with Cutting-Edge Technology
         </h1>
         <div className="mt-8 flex max-sm:flex-col sm:space-x-4 max-sm:space-y-6">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="px-6 py-3 text-sm font-semibold text-color1 bg-color2 rounded-full hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-color2 focus:outline-none focus:ring-opacity-50"
           >
             Learn about our Products
-          </a>
+          </Link>
         </div>
       </div>
       <div className="md:h-[450px] max-h-[450px]">

@@ -1,6 +1,7 @@
 import { getSixProducts } from "../lib/api";
 import { useEffect, useState } from "react";
 import { FaArrowDown, FaArrowRight, FaStar } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function Innovation() {
   const [products, setProducts] = useState<any[]>([]);
@@ -32,13 +33,13 @@ function Innovation() {
                 <h3 className="text-xl font-spaceGrotesk font-bold py-4">
                   {p.title}
                 </h3>
-                <a
-                  href={`/product/${p.slug}`}
+                <Link
+                  to={`/product/${p.slug}`}
                   className="flex uppercase justify-start items-center gap-2 text-white text-sm tracking-wider hover:text-opacity-80"
                 >
                   See More
                   <FaArrowRight />
-                </a>
+                </Link>
               </div>
               <div className="relative overflow-hidden">
                 <img

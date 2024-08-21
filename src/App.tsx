@@ -1,33 +1,20 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Layout from "./Layout";
 import About from "./components/about/About";
 import ProductLayout from "./components/product/productLayout";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        path: "",
-        element: <Home />,
-      },
-      {
-        path: "about",
-        element: <About />,
-      },
-      {
-        path: "product/:slug",
-        element: <ProductLayout />,
-      },
-    ],
-  },
-]);
-
 function App() {
   return (
-    <RouterProvider router={router} />
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/product/:slug" element={<ProductLayout />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 

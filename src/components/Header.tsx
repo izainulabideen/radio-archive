@@ -1,17 +1,16 @@
 import { logo } from "../assets/images";
 import { useState } from "react";
 import ProductMenu from "./menu/Product";
-import { useNavigation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [openMenu, setOpenMenu] = useState(false);
-  const naviagte = useNavigation()
-  const pathname = naviagte.location?.pathname || '/';
+  const pathname = window.location.pathname || '/';
 
   return (
     <header className="flex bg-color1 font-sans min-h-[70px] tracking-wide relative z-50">
       <div className="flex flex-wrap items-center justify-between px-4 md:px-10 py-3 gap-4 w-full">
-        <a href="/">
+      <Link to="/">
           <img
             src={logo}
             alt="logo"
@@ -19,7 +18,7 @@ function Header() {
             width={200}
             className="w-36"
           />
-        </a>
+        </Link>
 
         <div
           id="collapseMenu"
@@ -49,7 +48,7 @@ function Header() {
 
           <ul className="lg:flex uppercase lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-color3 max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
             <li className="mb-6 hidden max-lg:block">
-              <a href="/">
+            <Link to="/">
                 <img
                   src={logo}
                   alt="logo"
@@ -57,28 +56,27 @@ function Header() {
                   width={120}
                   className="w-36"
                 />
-              </a>
+              </Link>
             </li>
             <li className="max-lg:border-b max-lg:py-3">
-              <a
-                href="/"
+            <Link to="/"
                 className={`hover:text-opacity-80 text-color2 text-sm ${
                   pathname === "/" ? "font-bold" : ""
                 } block`}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <ProductMenu pathname={pathname} />
             <li className="max-lg:border-b max-lg:py-3">
-              <a
-                href="/about"
+            <Link
+                to="/about"
                 className={`hover:text-opacity-80 text-color2 text-sm ${
                   pathname === "/about" ? "font-bold" : ""
                 } block`}
               >
                 About
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

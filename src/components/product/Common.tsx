@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function Common() {
   return (
@@ -7,20 +8,20 @@ function Common() {
       </h2>
       <p className="text-sm leading-relaxed">
         To use our techology for your own recordings or to{" "}
-        <a
-          href="https://s3.amazonaws.com/radio-archive.org.site/transcribe.html"
+        <Link
+          to="https://s3.amazonaws.com/radio-archive.org.site/transcribe.html"
           className="underline"
         >
           make your own batch transcription jobs
-        </a>{" "}
+        </Link>{" "}
         at a fraction of what you pay now, see the email contact information
         below or message us at{" "}
-        <a
-          href="https://www.linkedin.com/company/radio-archive-org"
+        <Link
+          to="https://www.linkedin.com/company/radio-archive-org"
           className="underline"
         >
           https://www.linkedin.com/company/radio-archive-org
-        </a>
+        </Link>
       </p>
     </div>
   );

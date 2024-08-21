@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function AboutContent() {
   return (
     <div className="px-4 md:px-10 py-12">
@@ -65,16 +67,16 @@ function AboutContent() {
               </p>
               <p className="text-color2 text-center text-lg font-spaceGrotesk mt-6">
                 Email us at{" "}
-                <a href="mailto:admin@radio-archive.org" className="underline">
+                <Link to="mailto:admin@radio-archive.org" className="underline">
                   admin@radio-archive.org
-                </a>{" "}
+                </Link>{" "}
                 Or connect with us on{" "}
-                <a
-                  href="https://www.linkedin.com/company/radio-archive-org"
+                <Link
+                  to="https://www.linkedin.com/company/radio-archive-org"
                   className="underline"
                 >
                   LinkedIn
-                </a>
+                </Link>
               </p>
             </div>
           </div>
