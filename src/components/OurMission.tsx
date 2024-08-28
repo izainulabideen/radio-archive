@@ -1,8 +1,13 @@
-import { Link } from "react-router-dom";
 import { mission1, mission2 } from "../assets/images";
 import { GoArrowDownRight } from "react-icons/go";
 
 function OurMission() {
+  const scrollToProducts = () => {
+    const productsSection = document.getElementById('products');
+    if (productsSection) {
+        productsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+};
   return (
     <div className="py-12 px-4 md:px-10">
       <div className="font-spaceGrotesk max-w-lg mx-auto">
@@ -29,12 +34,12 @@ function OurMission() {
             any phrase from programs, advertisements, or news.
           </p>
           <div className="mt-8 flex max-sm:flex-col text-center sm:space-x-4 max-sm:space-y-6">
-          <Link
-            to="/"
-            className="px-6 py-3 text-sm font-semibold text-color1 bg-color2 rounded-full hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-color2 focus:outline-none focus:ring-opacity-50"
+          <div
+            onClick={scrollToProducts}
+            className="cursor-pointer px-6 py-3 text-sm font-semibold text-color1 bg-color2 rounded-full hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-color2 focus:outline-none focus:ring-opacity-50"
           >
             Learn More
-          </Link>
+          </div>
         </div>
         </div>
         <div className="flex-[2] grid sm:grid-cols-2 gap-8 max-md:max-w-lg mx-auto">

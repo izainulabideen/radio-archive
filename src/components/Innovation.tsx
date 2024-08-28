@@ -16,7 +16,7 @@ function Innovation() {
   }, []);
   
   return (
-    <div className="px-4 md:px-10 py-12">
+    <div id="products" className="px-4 md:px-10 py-12">
       <div className="max-w-7xl max-md:max-w-lg mx-auto">
         <h2 className="flex justify-center items-center gap-4 uppercase font-spaceGrotesk text-4xl text-center">
           OUR INNOVATION
