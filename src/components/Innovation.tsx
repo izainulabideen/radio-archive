@@ -43,7 +43,7 @@ function Innovation() {
               </div>
               <div className="relative overflow-hidden">
                 <img
-                  src={p.coverImage}
+                  src={`${import.meta.env.BASE_URL}/${p.coverImage}`}
                   width={200}
                   height={200}
                   alt={`Innovation ${i + 1}`}

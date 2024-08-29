@@ -1,8 +1,8 @@
 import { Product } from "../interfaces/product";
 import matter from "gray-matter";
 
-const productsDirectory = "/_products";
-const productJsonPath = "/product.json";
+const productsDirectory = `${import.meta.env.BASE_URL}/_products`;
+const productJsonPath = `${import.meta.env.BASE_URL}/product.json`;
 
 export async function getProductSlugs() {
   try {
