@@ -4,7 +4,7 @@ function ProductHero({ data }: any) {
     <>
       <div className="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-black/50 before:z-10">
         <img
-          src={`${import.meta.env.BASE_URL}/${data?.imageUrl || '/placeholder.webp'}`}
+          src={`${import.meta.env.BASE_URL}${data?.imageUrl || '/placeholder.webp'}`}
           alt={data?.title || ''}
           width={400}
           height={400}
