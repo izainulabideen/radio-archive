@@ -10,7 +10,7 @@ function OurMission() {
           <GoArrowDownRight />
           <span>Our Mission</span>
         </div>
-        <h2 className="text-4xl font-light text-center">
+        <h2 className="text-3xl sm:text-4xl font-light text-center">
           we are revolutionizing the way radio history is preserved and accessed
         </h2>
       </div>
