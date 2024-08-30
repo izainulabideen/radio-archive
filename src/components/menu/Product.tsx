@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getSixProductNameSlug } from "../../lib/api";
 import { Link } from "react-router-dom";
 
-function ProductMenu({ pathname }: { pathname: string }) {
+function ProductMenu({ pathname, handleMenu}: { pathname: string, handleMenu: any }) {
   const [productNames, setProductNames] = useState([
     {
       title: "",
@@ -47,7 +47,7 @@ function ProductMenu({ pathname }: { pathname: string }) {
       </span>
       <ul className="absolute shadow-lg bg-color3 space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500">
         {productNames.map((p) => (
-          <li className="py-2" key={p.slug}>
+          <li className="py-2" key={p.slug} onClick={handleMenu}>
             <Link
               to={`/product/${p.slug}`} // Assuming you want to link to a product page
               className="hover:text-opacity-80 text-color2 text-sm block"

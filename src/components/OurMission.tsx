@@ -1,13 +1,8 @@
 import { mission1, mission2 } from "../assets/images";
 import { GoArrowDownRight } from "react-icons/go";
+import { scrollToSection } from "../lib/scroll";
 
 function OurMission() {
-  const scrollToProducts = () => {
-    const productsSection = document.getElementById('products');
-    if (productsSection) {
-        productsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-};
   return (
     <div className="py-12 px-4 md:px-10">
       <div className="font-spaceGrotesk max-w-lg mx-auto">
@@ -35,7 +30,7 @@ function OurMission() {
           </p>
           <div className="mt-8 flex max-sm:flex-col text-center sm:space-x-4 max-sm:space-y-6">
           <div
-            onClick={scrollToProducts}
+            onClick={()=> scrollToSection("products")}
             className="cursor-pointer px-6 py-3 text-sm font-semibold text-color1 bg-color2 rounded-full hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-color2 focus:outline-none focus:ring-opacity-50"
           >
             Learn More

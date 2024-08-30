@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { logo } from "../assets/images";
 import { useEffect, useState } from "react";
 import { getSixProductNameSlug } from "../lib/api";
+import { scrollToSection } from "../lib/scroll";
 
 function Footer() {
   const [productNames, setProductNames] = useState([
@@ -30,7 +31,7 @@ function Footer() {
           <h2 className="text-color2 text-md uppercase mb-4">Navigate</h2>
           <ul className="space-y-4">
             <li>
-              <Link to="/about" className="text-color5 text-sm transition-all">
+              <Link to="/about" onClick={()=> scrollToSection("top")} className="text-color5 text-sm transition-all">
                 About Us
               </Link>
             </li>
@@ -38,6 +39,7 @@ function Footer() {
               <li key={p.slug}>
                 <Link
                   to={`/product/${p.slug}`}
+                  onClick={()=> scrollToSection("top")}
                   className="text-color5 text-sm transition-all"
                 >
                   {p.title}
@@ -48,7 +50,7 @@ function Footer() {
         </div>
 
         <div className="flex flex-col gap-4 sm:items-end lg:justify-start">
-          <Link to="/">
+          <Link to="/"  onClick={()=> scrollToSection("top")}>
             <img
               src={logo}
               alt="logo"

@@ -2,6 +2,7 @@ import { getSixProducts } from "../lib/api";
 import { useEffect, useState } from "react";
 import { FaArrowDown, FaArrowRight, FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { scrollToSection } from "../lib/scroll";
 
 function Innovation() {
   const [products, setProducts] = useState<any[]>([]);
@@ -26,7 +27,7 @@ function Innovation() {
           {products.length > 0 && products.map((p: any, i: number) => (
             <div
               key={i}
-              className="flex flex-col justify-between bg-color1 border-2 border-color2 cursor-pointer rounded-2xl overflow-hidden group"
+              className="flex flex-col justify-between bg-color1 border-2 border-color2 rounded-2xl overflow-hidden group"
             >
               <div className="p-6">
                 <FaStar />
@@ -35,6 +36,7 @@ function Innovation() {
                 </h3>
                 <Link
                   to={`/product/${p.slug}`}
+                  onClick={()=> scrollToSection("top")}
                   className="flex uppercase justify-start items-center gap-2 text-white text-sm tracking-wider hover:text-opacity-80"
                 >
                   See More

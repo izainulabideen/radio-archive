@@ -9,7 +9,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="bg-color1">
+    <div id="top" className="bg-color1">
       <Header />
       {children}
       <Testimonial />
