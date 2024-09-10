@@ -36,15 +36,14 @@ content:
   - name: home
     label: Home Page
     type: file
-    path: _home
-    file: _home/home.md
+    path: src/assets/_home/home.md
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: heroImage, label: Hero Image, type: image }
       - {
           name: sections,
           label: Sections,
-          type: list,
+          type: object,
           fields:
             [
               { name: heading, label: Heading, type: string, required: true },
@@ -56,8 +55,7 @@ content:
   - name: about
     label: About Us Page
     type: file
-    path: _about
-    file: _about/about.md
+    path: src/assets/_about/about.md
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: content, label: Content, type: rich-text }
@@ -66,14 +64,13 @@ content:
   - name: header
     label: Header
     type: file
-    path: _common
-    file: _common/header.md
+    path: src/assets/_common/header.md
     fields:
       - { name: logo, label: Logo, type: image }
       - {
           name: menu,
           label: Menu,
-          type: list,
+          type: object,
           fields:
             [
               { name: linkText, label: Link Text, type: string },
@@ -85,14 +82,13 @@ content:
   - name: footer
     label: Footer
     type: file
-    path: _common
-    file: _common/footer.md
+    path: src/assets/_common/footer.md
     fields:
       - { name: logo, label: Logo, type: image }
       - {
           name: links,
           label: Links,
-          type: list,
+          type: object,
           fields:
             [
               { name: linkText, label: Link Text, type: string },
