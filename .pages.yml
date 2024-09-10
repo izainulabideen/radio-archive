@@ -1,7 +1,7 @@
 media:
   input: public/assets
   output: /assets
-  categories: ["image"]
+  categories: ["image", "document"]
 content:
   - name: products
     label: Products
@@ -164,7 +164,7 @@ content:
               { name: url, label: URL, type: string },
             ],
         }
-    # Demo Section
+    # Demo Section (shared across pages)
   - name: demo
     label: Demo
     type: file
@@ -174,7 +174,7 @@ content:
       - { name: firstVideo, label: First Video (URL), type: string }
       - { name: secondVideo, label: Second Video (URL), type: string }
 
-    # Contact Section
+    # Contact Section (shared across pages)
   - name: contact
     label: Contact
     type: file
@@ -184,3 +184,20 @@ content:
       - { name: backgroundText, label: backgroundText, type: string }
       - { name: buttonText, label: Button Text, type: string }
       - { name: buttonLink, label: Button Link, type: string }
+
+# Fonts (shared across pages)
+  - name: fonts
+    label: Fonts
+    type: file
+    path: src/assets/_common/font.json
+    fields:
+    - name: defaultFontName
+      label: Default Font Name
+      type: string
+      required: true
+    - name: defaultFontFile
+      label: Default Font File
+      type: file
+      required: true
+
+
