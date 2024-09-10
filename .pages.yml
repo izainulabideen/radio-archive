@@ -180,7 +180,8 @@ content:
               { name: url, label: URL, type: string },
             ],
         }
-    # Demo Section (shared across pages)
+  
+  # Demo Section (shared across pages)
   - name: demo
     label: Demo
     type: file
