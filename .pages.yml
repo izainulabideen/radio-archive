@@ -36,7 +36,7 @@ content:
   - name: home
     label: Home Page
     type: file
-    path: src/assets/_home/home.md
+    path: public/_home/home.md
     fields:
       - { name: heading, label: Heading, type: string, required: true }
       - { name: buttonText, label: Button Text, type: string, required: true }
@@ -124,7 +124,7 @@ content:
   - name: about
     label: About Us Page
     type: file
-    path: src/assets/_about/about.md
+    path: public/_about/about.md
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: content, label: Content, type: rich-text }
@@ -133,7 +133,7 @@ content:
   - name: header
     label: Header
     type: file
-    path: src/assets/_common/header.md
+    path: public/_common/header.md
     fields:
       - { name: logo, label: Logo, type: image }
       - {
@@ -151,7 +151,7 @@ content:
   - name: footer
     label: Footer
     type: file
-    path: src/assets/_common/footer.md
+    path: public/_common/footer.md
     fields:
       - { name: logo, label: Logo, type: image }
       - {
@@ -168,7 +168,7 @@ content:
   - name: demo
     label: Demo
     type: file
-    path: src/assets/_common/demo.md
+    path: public/_common/demo.md
     fields:
       - { name: demoHeading, label: Demo Heading, type: string }
       - { name: firstVideo, label: First Video (URL), type: string }
@@ -178,7 +178,7 @@ content:
   - name: contact
     label: Contact
     type: file
-    path: src/assets/_common/contact.md
+    path: public/_common/contact.md
     fields:
       - { name: contactHeading, label: Contact Heading, type: string }
       - { name: backgroundText, label: backgroundText, type: string }
@@ -189,7 +189,7 @@ content:
   - name: fonts
     label: Fonts
     type: file
-    path: src/assets/_common/font.json
+    path: public/_common/font.json
     fields:
     - name: defaultFontName
       label: Default Font Name
