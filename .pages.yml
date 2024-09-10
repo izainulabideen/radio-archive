@@ -56,18 +56,18 @@ content:
                     { name: missionHeading, label: Heading, type: string },
                     {
                       name: mission-content,
-                      label: Content,
+                      label: Mission Details,
                       type: object,
                       fields:
                         [
                           {
                             name: missionContentHeading,
-                            label: Content Heading,
+                            label: Mission Content Heading,
                             type: string,
                           },
                           {
                             name: missionContent,
-                            label: Content,
+                            label: Mission Content,
                             type: rich-text,
                           },
                           {
@@ -85,11 +85,35 @@ content:
                   ],
               },
               {
-                name: heading,
-                label: Our Mission,
+                name: innovation,
+                label: Innovation Section,
                 type: string,
                 required: true,
-                { name: content, label: Content, type: rich-text },
+                {
+                  name: innovationHeading,
+                  label: Innovation Heading,
+                  type: string,
+                },
+              },
+              {
+                name: demo,
+                label: Demo Section,
+                type: object,
+                required: true,
+                fields:
+                  [
+                    { name: demoHeading, label: Demo Heading, type: string },
+                    {
+                      name: firstVideo,
+                      label: First Video (URL),
+                      type: string,
+                    },
+                    {
+                      name: secondVideo,
+                      label: Second Video (URL),
+                      type: string,
+                    },
+                  ],
               },
             ],
         }
