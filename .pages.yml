@@ -206,6 +206,8 @@ content:
     - name: SpecificFontFileName
       label: Specific Font File Name ( with extention e.g. inter-regular.tff )
       type: string
+      options:
+        extensions: ["ttf"]
       required: true
 
 
