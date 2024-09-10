@@ -95,26 +95,6 @@ content:
                   type: string,
                 },
               },
-              {
-                name: demo,
-                label: Demo Section,
-                type: object,
-                required: true,
-                fields:
-                  [
-                    { name: demoHeading, label: Demo Heading, type: string },
-                    {
-                      name: firstVideo,
-                      label: First Video (URL),
-                      type: string,
-                    },
-                    {
-                      name: secondVideo,
-                      label: Second Video (URL),
-                      type: string,
-                    },
-                  ],
-              },
             ],
         }
 
@@ -162,3 +142,14 @@ content:
               { name: url, label: URL, type: string },
             ],
         }
+    # Demo Section
+  - name: demo
+    label: Demo
+    type: file
+    path: src/assets/_common/demo.md
+    fields: 
+     - { name: demoHeading, label: Demo Heading, type: string },
+     - { name: firstVideo, label: First Video (URL), type: string },
+     - { name: secondVideo, label: Second Video (URL), type: string },
+                  
+              
