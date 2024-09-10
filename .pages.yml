@@ -55,7 +55,11 @@ content:
                 required: true,
                 fields:
                   [
-                    { name: missionTopHeading, label: Top Heading, type: string },
+                    {
+                      name: missionTopHeading,
+                      label: Top Heading,
+                      type: string,
+                    },
                     { name: missionHeading, label: Heading, type: string },
                     {
                       name: mission-content,
@@ -73,8 +77,18 @@ content:
                             label: Mission Content,
                             type: rich-text,
                           },
-                          { name: buttonText, label: Button Text, type: string, required: true },
-                          { name: buttonLink, label: Button Link, type: string, required: true },
+                          {
+                            name: buttonText,
+                            label: Button Text,
+                            type: string,
+                            required: true,
+                          },
+                          {
+                            name: buttonLink,
+                            label: Button Link,
+                            type: string,
+                            required: true,
+                          },
                           {
                             name: missionImage1,
                             label: First Image,
