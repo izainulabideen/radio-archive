@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Hero heading={data?.heading} buttonText={data?.buttonText} buttonLink={data?.buttonLink} heroImage={data?.heroImage} />
-      <OurMission />
+      <OurMission data={data?.sections?.mission} />
       <Innovation />
       <Demo />
     </>
