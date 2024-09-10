@@ -49,7 +49,7 @@ content:
           fields:
             [
               {
-                name: misson,
+                name: mission,
                 label: Mission Section,
                 type: object,
                 required: true,
