@@ -7,4 +7,7 @@ menu:
     url: /product
   - linkText: About
     url: /about
+rightMenu:
+  - linkText: Get In Touch
+    url: mailto:admin@radio-archive.org
 ---
