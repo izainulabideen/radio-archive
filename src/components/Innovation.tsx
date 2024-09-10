@@ -1,4 +1,4 @@
-import { getSixProducts } from "../lib/api";
+import { getSixProducts } from "../lib/product";
 import { useEffect, useState } from "react";
 import { FaArrowDown, FaArrowRight, FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -21,7 +21,7 @@ function Innovation() {
   return (
     <div id="products" className="px-4 md:px-10 py-12">
       <div className="max-w-7xl max-md:max-w-lg mx-auto">
-        <h2 className="flex justify-center items-center gap-4 uppercase text-4xl text-center" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
+        <h2 className="flex justify-center items-center gap-4 uppercase text-4xl text-center" style={{fontFamily: `${fontConfig?.specificFontName}`}}>
           OUR INNOVATION
           <FaArrowDown />
         </h2>
@@ -33,7 +33,7 @@ function Innovation() {
             >
               <div className="p-6">
                 <FaStar />
-                <h3 className="text-xl font-bold py-4" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
+                <h3 className="text-xl font-bold py-4" style={{fontFamily: `${fontConfig?.specificFontName}`}}>
                   {p.title}
                 </h3>
                 <Link
@@ -47,7 +47,7 @@ function Innovation() {
               </div>
               <div className="relative overflow-hidden">
                 <img
-                  src={`${import.meta.env.BASE_URL}${p.coverImage}`}
+                  src={`${import.meta.env.BASE_URL}${p.coverImage.replace('/')}`}
                   width={200}
                   height={200}
                   alt={`Innovation ${i + 1}`}

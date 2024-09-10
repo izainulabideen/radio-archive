@@ -15,7 +15,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <div
         id="top"
         className="bg-color1"
-        style={{ fontFamily: fontConfig?.defaultFont.name }}
+        style={{ fontFamily: fontConfig?.specificFontName }}
       >
         <Header />
         {children}

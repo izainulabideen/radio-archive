@@ -18,7 +18,7 @@ function ProductHero({ data }: any) {
             <span className="bg-color1 p-2 rounded-md text-xs">
               By {data?.author}
             </span>
-            <h1 className="text-color1 sm:text-3xl text-2xl font-bold mt-6" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
+            <h1 className="text-color1 sm:text-3xl text-2xl font-bold mt-6" style={{fontFamily: `${fontConfig?.specificFontName}`}}>
               {data?.title}
             </h1>
           </div>

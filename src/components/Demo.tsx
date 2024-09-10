@@ -7,7 +7,7 @@ function Demo() {
   return (
     <div className="px-4 md:px-10 py-12">
       <div className="max-w-7xl max-md:max-w-lg mx-auto">
-        <h2 className="flex justify-center items-center gap-4 uppercase text-4xl text-center" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
+        <h2 className="flex justify-center items-center gap-4 uppercase text-4xl text-center" style={{fontFamily: `${fontConfig?.specificFontName}`}}>
           Demo
           <FaArrowDown />
         </h2>

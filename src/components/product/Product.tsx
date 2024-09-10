@@ -1,7 +1,7 @@
 import ProductContent from "./ProductContent";
 import ProductHero from "./ProductHero";
 import { useEffect, useState } from "react";
-import { getProductBySlug } from "../../lib/api";
+import { getProductBySlug } from "../../lib/product";
 
 interface ProductPageProps {
     slug: string;

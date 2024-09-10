@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getSixProductNameSlug } from "../../lib/api";
+import { getSixProductNameSlug } from "../../lib/product";
 import { Link } from "react-router-dom";
 
 function ProductMenu({ pathname, handleMenu}: { pathname: string, handleMenu: any }) {

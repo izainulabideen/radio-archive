@@ -1,13 +1,13 @@
 ---
 title: "The Transcriber Technology"
 excerpt: "Early in the radio-archive project we were faced with the high market costs of transcribing millions of hours of continuous audio."
-coverImage: "assets/product/product-3.jpg"
+coverImage: "/assets/product/product-3.jpg"
 date: "2020-03-16T05:35:07.322Z"
 author: 
     name: Radio Archive
-    picture: "assets/product/product-3.jpg"
+    picture: "/assets/product/product-3.jpg"
 ogImage: 
-    url: "assets/product/product-3.jpg"
+    url: "/assets/product/product-3.jpg"
 ---
 
 Early in the radio-archive project we were faced with the high market costs of transcribing millions of hours of continuous audio. Just for the first 500,000 hours we had already recorded it would have cost over $253,000 using AWS Transcribe (based on Amazon's own cost estimator). Over 50 cents per hour and that's just for the transcribe calls; not even the whole batch processing solution! We needed to figure out how to do this and keep the total costs closer to 1 cent / hour yet still do it quickly. And if we could leverage any old Nvidia gaming GPUs we had lying around perhaps we could bring this cost down even further.

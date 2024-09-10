@@ -7,7 +7,7 @@ export interface HomePage {
       mission: {
         missionTopHeading?: string;
         missionHeading?: string;
-        missionContent: {
+        missionDetails: {
           missionContentHeading?: string;
           missionContent: string;
           buttonText: string;

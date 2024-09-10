@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { logo } from "../assets/images";
 import { useEffect, useState } from "react";
-import { getSixProductNameSlug } from "../lib/api";
+import { getSixProductNameSlug } from "../lib/product";
 import { scrollToSection } from "../lib/scroll";
 
 function Footer() {

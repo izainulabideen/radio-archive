@@ -7,10 +7,10 @@ function AboutContent() {
     <div className="px-4 md:px-10 py-12">
       <div className="max-w-2xl mx-auto">
         <div>
-          <h2 className="text-4xl font-extrabold text-color2 mb-4 text-center" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
+          <h2 className="text-4xl font-extrabold text-color2 mb-4 text-center" style={{fontFamily: `${fontConfig?.specificFontName}`}}>
             Our Mission
           </h2>
-          <p className="text-color2 text-center text-xl mt-4" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
+          <p className="text-color2 text-center text-xl mt-4" style={{fontFamily: `${fontConfig?.specificFontName}`}}>
             At Radio Archive, we are revolutionizing the way radio history is
             preserved and accessed. Our innovative technology empowers you to
             explore the rich heritage of radio broadcasts, offering a seamless
@@ -20,7 +20,7 @@ function AboutContent() {
         {/* <hr className="my-10" /> */}
         <div className="grid gap-16 py-12">
           <div>
-            <h3 className="text-center text-3xl font-bold text-color2" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
+            <h3 className="text-center text-3xl font-bold text-color2" style={{fontFamily: `${fontConfig?.specificFontName}`}}>
               Development Timeline
             </h3>
             <div className="mt-4">
@@ -59,15 +59,15 @@ function AboutContent() {
             </div>
           </div>
           <div className="max-w-lg mx-auto">
-            <h3 className="text-center text-3xl font-bold text-color2" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
+            <h3 className="text-center text-3xl font-bold text-color2" style={{fontFamily: `${fontConfig?.specificFontName}`}}>
               Contact Us
             </h3>
             <div className="mt-4">
-              <p className="text-color2 text-center text-lg" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
+              <p className="text-color2 text-center text-lg" style={{fontFamily: `${fontConfig?.specificFontName}`}}>
                 Interested in accessing our archives, licensing our technology,
                 or sponsoring a new geographic area?
               </p>
-              <p className="text-color2 text-center text-lg mt-6" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
+              <p className="text-color2 text-center text-lg mt-6" style={{fontFamily: `${fontConfig?.specificFontName}`}}>
                 Email us at{" "}
                 <Link to="mailto:admin@radio-archive.org" className="underline">
                   admin@radio-archive.org

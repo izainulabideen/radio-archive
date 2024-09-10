@@ -1,13 +1,13 @@
 ---
 title: The Collector Technology
 excerpt: Lowering collection costs means more complete archives.
-coverImage: assets/product/product-2.jpg
+coverImage: /assets/product/product-2.jpg
 date: 2020-03-16T05:35:07.322Z
 author:
   name: Radio Archive
-  picture: assets/product/product-2.jpg
+  picture: /assets/product/product-2.jpg
 ogImage:
-  url: assets/product/product-2.jpg
+  url: /assets/product/product-2.jpg
 ---
 Lowering collection costs means more complete archives.
 
