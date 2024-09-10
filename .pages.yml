@@ -62,7 +62,7 @@ content:
                     },
                     { name: missionHeading, label: Heading, type: string },
                     {
-                      name: mission-content,
+                      name: missionDetails,
                       label: Mission Details,
                       type: object,
                       fields:
@@ -195,7 +195,11 @@ content:
       label: Default Font Name
       type: string
       required: true
-    - name: defaultFontFileName
+    - name: defaultFontWeight
+      label: Default Font Weight
+      type: string
+      required: true
+    - name: defaultFontFilename
       label: Default Font File Name ( with extention e.g. inter-regular.tff )
       type: string
       required: true
@@ -203,7 +207,11 @@ content:
       label: Specific Font Name
       type: string
       required: true
-    - name: SpecificFontFileName
+    - name: specificFontWeight
+      label: Specific Font Weight
+      type: string
+      required: true
+    - name: SpecificFontFilename
       label: Specific Font File Name ( with extention e.g. inter-regular.tff )
       type: string
       required: true
