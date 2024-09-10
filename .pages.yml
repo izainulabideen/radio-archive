@@ -6,7 +6,7 @@ content:
   - name: products
     label: Products
     type: collection
-    path: _products
+    path: public/_products
     view:
       fields: [coverImage, title, date]
     fields:
