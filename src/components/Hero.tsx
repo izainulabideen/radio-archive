@@ -1,6 +1,7 @@
 import { hero } from "../assets/images";
 import { useFontConfig } from "../context/FontProvider";
 import { scrollToSection } from "../lib/scroll";
+import { getImageSrc } from "../lib/set-image-src";
 
 function Hero({
   heading,
@@ -8,7 +9,7 @@ function Hero({
   buttonLink,
   heroImage,
 }: {
-  heading: string| undefined;
+  heading: string | undefined;
   buttonText: string | undefined;
   buttonLink: string | undefined;
   heroImage: string | undefined;
@@ -26,7 +27,7 @@ function Hero({
         </h1>
         <div className="mt-8 flex max-sm:flex-col sm:space-x-4 max-sm:space-y-6">
           <div
-            onClick={() => scrollToSection(buttonLink || "product")}
+            onClick={() => scrollToSection(buttonLink || "products")}
             className="cursor-pointer px-6 py-3 text-sm font-semibold text-color1 bg-color2 rounded-full hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-color2 focus:outline-none focus:ring-opacity-50"
           >
             {buttonText || "Learn about our Products"}
@@ -35,7 +36,7 @@ function Hero({
       </div>
       <div className="md:h-[450px] max-h-[450px]">
         <img
-          src={heroImage || hero}
+          src={getImageSrc(heroImage!, hero)}
           className="w-full h-full max-h-[450px] object-cover rounded-lg shadow-xl"
           width={400}
           height={400}
