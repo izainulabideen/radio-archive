@@ -195,9 +195,17 @@ content:
       label: Default Font Name
       type: string
       required: true
-    - name: defaultFontFile
-      label: Default Font File
-      type: file
+    - name: defaultFontFileName
+      label: Default Font File Name ( with extention e.g. inter-regular.tff )
+      type: string
+      required: true
+    - name: specificFontName
+      label: Specific Font Name
+      type: string
+      required: true
+    - name: SpecificFontFileName
+      label: Specific Font File Name ( with extention e.g. inter-regular.tff )
+      type: string
       required: true
 
 
