@@ -87,13 +87,16 @@ content:
               {
                 name: innovation,
                 label: Innovation Section,
-                type: string,
+                type: object,
                 required: true,
-                {
-                  name: innovationHeading,
-                  label: Innovation Heading,
-                  type: string,
-                },
+                fields:
+                  [
+                    {
+                      name: innovationHeading,
+                      label: Innovation Heading,
+                      type: string,
+                    },
+                  ],
               },
             ],
         }
@@ -147,20 +150,18 @@ content:
     label: Demo
     type: file
     path: src/assets/_common/demo.md
-    fields: 
-     - { name: demoHeading, label: Demo Heading, type: string }
-     - { name: firstVideo, label: First Video (URL), type: string }
-     - { name: secondVideo, label: Second Video (URL), type: string }
+    fields:
+      - { name: demoHeading, label: Demo Heading, type: string }
+      - { name: firstVideo, label: First Video (URL), type: string }
+      - { name: secondVideo, label: Second Video (URL), type: string }
 
-   # Contact Section
+    # Contact Section
   - name: contact
     label: Contact
     type: file
     path: src/assets/_common/contact.md
-    fields: 
-     - { name: contactHeading, label: Contact Heading, type: string }
-     - { name: backgroundText, label: backgroundText, type: string }
-     - { name: buttonText, label: Button Text, type: string }
-     - { name: buttonLink, label: Button Link, type: string }
-                  
-              
+    fields:
+      - { name: contactHeading, label: Contact Heading, type: string }
+      - { name: backgroundText, label: backgroundText, type: string }
+      - { name: buttonText, label: Button Text, type: string }
+      - { name: buttonLink, label: Button Link, type: string }
