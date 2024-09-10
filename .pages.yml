@@ -147,6 +147,17 @@ content:
               { name: url, label: URL, type: string },
             ],
         }
+      - {
+          name: rightMenu,
+          label: Right Menu,
+          type: object,
+          list: true,
+          fields:
+            [
+              { name: linkText, label: Link Text, type: string },
+              { name: url, label: URL, type: string },
+            ],
+        }
 
   # Footer Configuration (shared across pages)
   - name: footer
@@ -186,35 +197,33 @@ content:
       - { name: buttonText, label: Button Text, type: string }
       - { name: buttonLink, label: Button Link, type: string }
 
-# Fonts (shared across pages)
+  # Fonts (shared across pages)
   - name: fonts
     label: Fonts
     type: file
     path: public/_common/font.json
     fields:
-    - name: defaultFontName
-      label: Default Font Name
-      type: string
-      required: true
-    - name: defaultFontWeight
-      label: Default Font Weight
-      type: string
-      required: true
-    - name: defaultFontFilename
-      label: Default Font File Name ( with extention e.g. inter-regular.tff )
-      type: string
-      required: true
-    - name: specificFontName
-      label: Specific Font Name
-      type: string
-      required: true
-    - name: specificFontWeight
-      label: Specific Font Weight
-      type: string
-      required: true
-    - name: SpecificFontFilename
-      label: Specific Font File Name ( with extention e.g. inter-regular.tff )
-      type: string
-      required: true
-
-
+      - name: defaultFontName
+        label: Default Font Name
+        type: string
+        required: true
+      - name: defaultFontWeight
+        label: Default Font Weight
+        type: string
+        required: true
+      - name: defaultFontFilename
+        label: Default Font File Name ( with extention e.g. inter-regular.tff )
+        type: string
+        required: true
+      - name: specificFontName
+        label: Specific Font Name
+        type: string
+        required: true
+      - name: specificFontWeight
+        label: Specific Font Weight
+        type: string
+        required: true
+      - name: SpecificFontFilename
+        label: Specific Font File Name ( with extention e.g. inter-regular.tff )
+        type: string
+        required: true
