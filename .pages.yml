@@ -48,21 +48,49 @@ content:
             [
               {
                 name: misson,
-                label: Mission Section, 
-                type: object, 
+                label: Mission Section,
+                type: object,
                 required: true,
-                fields: [
-                  { name: content, label: Content, type: rich-text },
-                  { name: content, label: Content, type: rich-text }
-                ],
+                fields:
+                  [
+                    { name: missionHeading, label: Heading, type: string },
+                    {
+                      name: mission-content,
+                      label: Content,
+                      type: object,
+                      fields:
+                        [
+                          {
+                            name: missionContentHeading,
+                            label: Content Heading,
+                            type: string,
+                          },
+                          {
+                            name: missionContent,
+                            label: Content,
+                            type: rich-text,
+                          },
+                          {
+                            name: missionImage1,
+                            label: First Image,
+                            type: image,
+                          },
+                          {
+                            name: missionImage2,
+                            label: Second Image,
+                            type: image,
+                          },
+                        ],
+                    },
+                  ],
               },
               {
                 name: heading,
-                label: Our Mission, 
-                type: string, 
+                label: Our Mission,
+                type: string,
                 required: true,
                 { name: content, label: Content, type: rich-text },
-              }
+              },
             ],
         }
 
