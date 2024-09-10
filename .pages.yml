@@ -46,8 +46,23 @@ content:
           type: object,
           fields:
             [
-              { name: heading, label: Heading, type: string, required: true },
-              { name: content, label: Content, type: rich-text },
+              {
+                name: misson,
+                label: Mission Section, 
+                type: object, 
+                required: true,
+                fields: [
+                  { name: content, label: Content, type: rich-text },
+                  { name: content, label: Content, type: rich-text }
+                ],
+              },
+              {
+                name: heading,
+                label: Our Mission, 
+                type: string, 
+                required: true,
+                { name: content, label: Content, type: rich-text },
+              }
             ],
         }
 
