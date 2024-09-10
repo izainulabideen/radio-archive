@@ -1,10 +1,13 @@
 import { FaArrowDown } from "react-icons/fa6";
+import { useFontConfig } from "../context/FontProvider";
 
 function Demo() {
+  const { fontConfig } = useFontConfig();
+  
   return (
     <div className="px-4 md:px-10 py-12">
       <div className="max-w-7xl max-md:max-w-lg mx-auto">
-        <h2 className="flex justify-center items-center gap-4 uppercase font-spaceGrotesk text-4xl text-center">
+        <h2 className="flex justify-center items-center gap-4 uppercase text-4xl text-center" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
           Demo
           <FaArrowDown />
         </h2>

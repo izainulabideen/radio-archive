@@ -1,20 +1,28 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-// import { Outlet } from "react-router-dom";
-import Testimonial from "./components/Testimonial";
+// src/Layout.tsx
+import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Testimonial from './components/Testimonial';
+import FontLoader from './FontLoader';
+import { FontProvider, useFontConfig } from './context/FontProvider';
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { fontConfig } = useFontConfig();
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div id="top" className="bg-color1">
-      <Header />
-      {children}
-      <Testimonial />
-      <Footer />
-    </div>
+    <FontProvider>
+      <FontLoader />
+      <div
+        id="top"
+        className="bg-color1"
+        style={{ fontFamily: fontConfig?.defaultFont.name }}
+      >
+        <Header />
+        {children}
+        <Testimonial />
+        <Footer />
+      </div>
+    </FontProvider>
   );
 };
 

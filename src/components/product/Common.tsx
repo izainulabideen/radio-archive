@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import { useFontConfig } from "../../context/FontProvider";
 
 function Common() {
+  const { fontConfig } = useFontConfig();
   return (
     <div className="px-4 md:px-10 py-12">
-      <h2 className="text-3xl font-spaceGrotesk mb-6">
+      <h2 className="text-3xl mb-6" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
         Run in your own Data Center
       </h2>
       <p className="text-sm leading-relaxed">

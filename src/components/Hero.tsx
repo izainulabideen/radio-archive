@@ -1,11 +1,14 @@
 import { hero } from "../assets/images";
+import { useFontConfig } from "../context/FontProvider";
 import { scrollToSection } from "../lib/scroll";
 
 function Hero() {
+  const { fontConfig } = useFontConfig();
+
   return (
     <div className="grid md:grid-cols-2 px-4 md:px-10 py-12 items-center md:gap-8 gap-6 mx-auto">
       <div className="max-md:order-1 max-md:text-center">
-        <h1 className="lg:text-6xl md:text-5xl text-4xl lg:leading-[5rem] md:leading-[4rem] font-extrabold font-spaceGrotesk text-color2 mb-4">
+        <h1 className="lg:text-6xl md:text-5xl text-4xl lg:leading-[5rem] md:leading-[4rem] font-extrabold text-color2 mb-4" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
           Preserving Radio Heritage with Cutting-Edge Technology
         </h1>
         <div className="mt-8 flex max-sm:flex-col sm:space-x-4 max-sm:space-y-6">

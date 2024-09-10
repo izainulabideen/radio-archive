@@ -1,11 +1,13 @@
 import { mission1, mission2 } from "../assets/images";
 import { GoArrowDownRight } from "react-icons/go";
 import { scrollToSection } from "../lib/scroll";
+import { useFontConfig } from "../context/FontProvider";
 
 function OurMission() {
+  const { fontConfig } = useFontConfig();
   return (
     <div className="py-12 px-4 md:px-10">
-      <div className="font-spaceGrotesk max-w-lg mx-auto">
+      <div className="max-w-lg mx-auto" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
         <div className="flex justify-center items-center gap-2">
           <GoArrowDownRight />
           <span>Our Mission</span>
@@ -16,7 +18,7 @@ function OurMission() {
       </div>
       <div className="flex max-lg:flex-col px-4 my-12 gap-12">
         <div className="flex-[1]">
-          <h2 className="text-3xl font-spaceGrotesk mb-6">
+          <h2 className="text-3xl mb-6" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
             A Time Machine For Radio
           </h2>
           <p className="text-sm leading-relaxed">

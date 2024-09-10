@@ -8,7 +8,7 @@ function Header() {
   const pathname = window.location.pathname || "/";
 
   return (
-    <header className="flex bg-color1 font-sans min-h-[70px] tracking-wide relative z-50">
+    <header className="flex bg-color1 min-h-[70px] tracking-wide relative z-50">
       <div className="flex flex-wrap items-center justify-between px-4 md:px-10 py-3 gap-4 w-full">
         <Link to="/">
           <img

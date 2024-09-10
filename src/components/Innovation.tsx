@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import { FaArrowDown, FaArrowRight, FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { scrollToSection } from "../lib/scroll";
+import { useFontConfig } from "../context/FontProvider";
 
 function Innovation() {
+  const { fontConfig } = useFontConfig();
   const [products, setProducts] = useState<any[]>([]);
 
   useEffect(() => {
@@ -19,7 +21,7 @@ function Innovation() {
   return (
     <div id="products" className="px-4 md:px-10 py-12">
       <div className="max-w-7xl max-md:max-w-lg mx-auto">
-        <h2 className="flex justify-center items-center gap-4 uppercase font-spaceGrotesk text-4xl text-center">
+        <h2 className="flex justify-center items-center gap-4 uppercase text-4xl text-center" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
           OUR INNOVATION
           <FaArrowDown />
         </h2>
@@ -31,7 +33,7 @@ function Innovation() {
             >
               <div className="p-6">
                 <FaStar />
-                <h3 className="text-xl font-spaceGrotesk font-bold py-4">
+                <h3 className="text-xl font-bold py-4" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
                   {p.title}
                 </h3>
                 <Link

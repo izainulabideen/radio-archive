@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
+import { useFontConfig } from "../../context/FontProvider";
 
 function AboutContent() {
+  const { fontConfig } = useFontConfig();
   return (
     <div className="px-4 md:px-10 py-12">
       <div className="max-w-2xl mx-auto">
         <div>
-          <h2 className="text-4xl font-extrabold font-spaceGrotesk text-color2 mb-4 text-center">
+          <h2 className="text-4xl font-extrabold text-color2 mb-4 text-center" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
             Our Mission
           </h2>
-          <p className="text-color2 text-center text-xl font-spaceGrotesk mt-4">
+          <p className="text-color2 text-center text-xl mt-4" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
             At Radio Archive, we are revolutionizing the way radio history is
             preserved and accessed. Our innovative technology empowers you to
             explore the rich heritage of radio broadcasts, offering a seamless
@@ -18,7 +20,7 @@ function AboutContent() {
         {/* <hr className="my-10" /> */}
         <div className="grid gap-16 py-12">
           <div>
-            <h3 className="text-center text-3xl font-bold text-color2 font-spaceGrotesk">
+            <h3 className="text-center text-3xl font-bold text-color2" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
               Development Timeline
             </h3>
             <div className="mt-4">
@@ -57,15 +59,15 @@ function AboutContent() {
             </div>
           </div>
           <div className="max-w-lg mx-auto">
-            <h3 className="text-center text-3xl font-bold text-color2 font-spaceGrotesk">
+            <h3 className="text-center text-3xl font-bold text-color2" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
               Contact Us
             </h3>
             <div className="mt-4">
-              <p className="text-color2 text-center text-lg font-spaceGrotesk">
+              <p className="text-color2 text-center text-lg" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
                 Interested in accessing our archives, licensing our technology,
                 or sponsoring a new geographic area?
               </p>
-              <p className="text-color2 text-center text-lg font-spaceGrotesk mt-6">
+              <p className="text-color2 text-center text-lg mt-6" style={{fontFamily: `${fontConfig?.specificFont.name}`}}>
                 Email us at{" "}
                 <Link to="mailto:admin@radio-archive.org" className="underline">
                   admin@radio-archive.org
