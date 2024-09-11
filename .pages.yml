@@ -127,6 +127,7 @@ content:
     path: public/_about/about.md
     fields:
       - { name: title, label: Title, type: string, required: true }
+      - { name: heroImage, label: Hero Image, type: image }
       - { name: content, label: Content, type: rich-text }
 
   # Header Configuration (shared across pages)
