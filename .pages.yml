@@ -197,8 +197,7 @@ content:
           list: true,
           fields:
             [
-              { name: firstVideo, label: First Video (URL), type: string },
-              { name: secondVideo, label: Second Video (URL), type: string },
+              { name: video, label: Video (URL), type: string },
             ],
         }
 
