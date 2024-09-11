@@ -128,7 +128,7 @@ content:
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: heroImage, label: Hero Image, type: image }
-      - { name: content, label: Content, type: rich-text }
+      - { name: body, label: Body, type: rich-text }
 
   # Header Configuration (shared across pages)
   - name: header
