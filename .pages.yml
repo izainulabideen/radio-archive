@@ -166,17 +166,22 @@ content:
     path: public/_common/footer.md
     fields:
       - { name: logo, label: Logo, type: image }
+      - { name: emailHeading, label: Email Heading, type: string }
+      - { name: email, label: Email, type: string }
+      - { name: copyright, label: Copyright, type: string }
       - {
-          name: links,
-          label: Links,
+          name: naviagtion,
+          label: Navigation,
           type: object,
+          list: true,
           fields:
             [
               { name: linkText, label: Link Text, type: string },
               { name: url, label: URL, type: string },
             ],
         }
-    # Demo Section (shared across pages)
+  
+  # Demo Section (shared across pages)
   - name: demo
     label: Demo
     type: file
