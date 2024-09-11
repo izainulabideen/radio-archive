@@ -1,6 +1,10 @@
 export interface Footer {
     logo: string;
-    links: {
+    emailHeading: string;
+    email: string;
+    copyright: string;
+    navigationHeading: string;
+    navigation: {
       linkText: string;
       url: string;
     }[];

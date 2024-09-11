@@ -4,7 +4,7 @@ emailHeading: E
 email: admin@radio-archive.org
 copyright: ©2024 Radio Archiv.org, All Rights Reserved
 navigationHeading: Navigate
-naviagtion:
+navigation:
   - linkText: About Us
     url: /about
 ---

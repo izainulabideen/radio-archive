@@ -19,7 +19,6 @@ function Header() {
       }
     })();
   }, []);
-  console.log(data);
 
   return (
     <header className="flex bg-color1 min-h-[70px] tracking-wide relative z-50">

@@ -3,8 +3,11 @@ import { logo } from "../assets/images";
 import { useEffect, useState } from "react";
 import { getSixProductNameSlug } from "../lib/product";
 import { scrollToSection } from "../lib/scroll";
+import { Footer as FooterProps } from "../interfaces/footer";
+import { getFooterData } from "../lib/footer";
 
 function Footer() {
+  const [data, setData] = useState<FooterProps>();
   const [productNames, setProductNames] = useState([
     {
       title: "",
@@ -24,22 +27,40 @@ function Footer() {
 
     fetchProductSlugs();
   }, []);
+
+  useEffect(() => {
+    (async () => {
+      const data = await getFooterData();
+      if (data) {
+        setData(data);
+      }
+    })();
+  }, []);
+
   return (
     <footer className="bg-color1 border-t-2 border-color2 border-opacity-60 py-12 px-4 md:px-10 tracking-wide relative">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         <div>
-          <h2 className="text-color2 text-md uppercase mb-4">Navigate</h2>
+          <h2 className="text-color2 text-md uppercase mb-4">
+            {data?.navigationHeading || "Navigate"}
+          </h2>
           <ul className="space-y-4">
-            <li>
-              <Link to="/about" onClick={()=> scrollToSection("top")} className="text-color5 text-sm transition-all">
-                About Us
-              </Link>
-            </li>
+            {data?.navigation?.map((item, i) => (
+              <li key={i}>
+                <Link
+                  to={item.url}
+                  onClick={() => scrollToSection("top")}
+                  className="text-color5 text-sm transition-all"
+                >
+                  {item.linkText}
+                </Link>
+              </li>
+            ))}
             {productNames.map((p) => (
               <li key={p.slug}>
                 <Link
                   to={`/product/${p.slug}`}
-                  onClick={()=> scrollToSection("top")}
+                  onClick={() => scrollToSection("top")}
                   className="text-color5 text-sm transition-all"
                 >
                   {p.title}
@@ -50,9 +71,9 @@ function Footer() {
         </div>
 
         <div className="flex flex-col gap-4 sm:items-end lg:justify-start">
-          <Link to="/"  onClick={()=> scrollToSection("top")}>
+          <Link to="/" onClick={() => scrollToSection("top")}>
             <img
-              src={logo}
+              src={data?.logo || logo}
               alt="logo"
               width={200}
               height={200}
@@ -60,12 +81,12 @@ function Footer() {
             />
           </Link>
           <p className="font-light text-sm text-color5">
-            E:{" "}
+            {data?.emailHeading}:{" "}
             <Link
-              to="mailto:admin@radio-archive.org"
+              to={`mailto:${data?.email}`}
               className="font-light text-sm uppercase underline"
             >
-              admin@radio-archive.org
+              {data?.email}
             </Link>
           </p>
         </div>
@@ -75,7 +96,7 @@ function Footer() {
 
       <div className="flex sm:justify-between flex-wrap gap-6">
         <p className="text-color5 text-sm">
-          ©2024 Radio Archiv.org, All Rights Reserved
+          {data?.copyright}
         </p>
       </div>
     </footer>
