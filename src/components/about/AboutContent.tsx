@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom";
 import { useFontConfig } from "../../context/FontProvider";
+import Content from "../Content";
 
-function AboutContent() {
+function AboutContent({content}: {content: string | undefined}) {
   const { fontConfig } = useFontConfig();
+  console.log(content);
+  
   return (
     <div className="px-4 md:px-10 py-12">
       <div className="max-w-2xl mx-auto">
-        <div>
+        <Content data={content || ""} />
+        {/* <div>
           <h2 className="text-4xl font-extrabold text-color2 mb-4 text-center" style={{fontFamily: `${fontConfig?.specificFontName}`}}>
             Our Mission
           </h2>
@@ -16,9 +20,9 @@ function AboutContent() {
             explore the rich heritage of radio broadcasts, offering a seamless
             journey through time.
           </p>
-        </div>
+        </div> */}
         {/* <hr className="my-10" /> */}
-        <div className="grid gap-16 py-12">
+        {/* <div className="grid gap-16 py-12">
           <div>
             <h3 className="text-center text-3xl font-bold text-color2" style={{fontFamily: `${fontConfig?.specificFontName}`}}>
               Development Timeline
@@ -82,7 +86,7 @@ function AboutContent() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

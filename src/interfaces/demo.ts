@@ -1,6 +1,7 @@
-export interface DemoPage {
+export interface Demo {
     demoHeading: string;
-    firstVideo: string;
-    secondVideo: string;
+    videoList: {
+      video: string;
+    }[]
   }
   

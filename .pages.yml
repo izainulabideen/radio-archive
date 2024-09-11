@@ -202,12 +202,12 @@ content:
         }
 
     # Contact Section (shared across pages)
-  - name: contact
-    label: Contact
+  - name: testimonial
+    label: Testimonial
     type: file
-    path: public/_common/contact.md
+    path: public/_common/testimonial.md
     fields:
-      - { name: contactHeading, label: Contact Heading, type: string }
+      - { name: testimonialText, label: Testimonial Text, type: text }
       - { name: backgroundText, label: backgroundText, type: string }
       - { name: buttonText, label: Button Text, type: string }
       - { name: buttonLink, label: Button Link, type: string }
