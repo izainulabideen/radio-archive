@@ -16,7 +16,6 @@ function Content({ data }: { data: string }) {
 
   return (
     <div
-      id="markdown"
       className={markdownStyles["markdown"]}
       dangerouslySetInnerHTML={{ __html: content }}
     />

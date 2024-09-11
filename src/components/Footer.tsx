@@ -42,9 +42,9 @@ function Footer() {
     <footer className="bg-color1 border-t-2 border-color2 border-opacity-60 py-12 px-4 md:px-10 tracking-wide relative">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         <div>
-          <h2 className="text-color2 text-md uppercase mb-4">
+          <span className="text-color2 text-md uppercase mb-4 block">
             {data?.navigationHeading || "Navigate"}
-          </h2>
+          </span>
           <ul className="space-y-4">
             {data?.navigation?.map((item, i) => (
               <li key={i}>
