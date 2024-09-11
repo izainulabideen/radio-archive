@@ -1,5 +1,6 @@
 import { aboutUs } from "../../assets/images";
 import { useFontConfig } from "../../context/FontProvider";
+import { getImageSrc } from "../../lib/set-image-src";
 
 function AboutHero({
   heroImage,
@@ -12,7 +13,7 @@ function AboutHero({
   return (
     <div className="relative before:absolute before:w-full before:h-full before:inset-0 before:bg-black/50 before:z-10">
       <img
-        src={heroImage || aboutUs}
+        src={getImageSrc(heroImage!, aboutUs)}
         alt={headingText}
         width={400}
         height={400}

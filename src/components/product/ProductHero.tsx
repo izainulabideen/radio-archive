@@ -1,4 +1,5 @@
 import { useFontConfig } from "../../context/FontProvider";
+import { getImageSrc } from "../../lib/set-image-src";
 
 function ProductHero({ data }: any) {
   const { fontConfig } = useFontConfig();
@@ -6,8 +7,8 @@ function ProductHero({ data }: any) {
     <>
       <div className="relative before:absolute before:w-full before:h-full before:inset-0 before:bg-black/50 before:z-10">
         <img
-          src={`${import.meta.env.BASE_URL}${data?.imageUrl || '/placeholder.webp'}`}
-          alt={data?.title || ''}
+          src={getImageSrc(data?.imageUrl, "/placeholder.webp")}
+          alt={data?.title || ""}
           width={400}
           height={400}
           className="absolute inset-0 w-full h-full object-cover"
@@ -18,7 +19,10 @@ function ProductHero({ data }: any) {
             <span className="bg-color1 p-2 rounded-md text-xs">
               By {data?.author}
             </span>
-            <h1 className="text-color1 sm:text-3xl text-2xl font-bold mt-6" style={{fontFamily: `${fontConfig?.specificFontName}`}}>
+            <h1
+              className="text-color1 sm:text-3xl text-2xl font-bold mt-6"
+              style={{ fontFamily: `${fontConfig?.specificFontName}` }}
+            >
               {data?.title}
             </h1>
           </div>

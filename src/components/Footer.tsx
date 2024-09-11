@@ -5,6 +5,7 @@ import { getSixProductNameSlug } from "../lib/product";
 import { scrollToSection } from "../lib/scroll";
 import { Footer as FooterProps } from "../interfaces/footer";
 import { getFooterData } from "../lib/footer";
+import { getImageSrc } from "../lib/set-image-src";
 
 function Footer() {
   const [data, setData] = useState<FooterProps>();
@@ -73,7 +74,7 @@ function Footer() {
         <div className="flex flex-col gap-4 sm:items-end lg:justify-start">
           <Link to="/" onClick={() => scrollToSection("top")}>
             <img
-              src={data?.logo || logo}
+              src={getImageSrc(data?.logo!, logo)}
               alt="logo"
               width={200}
               height={200}
