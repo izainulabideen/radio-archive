@@ -228,7 +228,7 @@ content:
         label: Specific Font Weight
         type: string
         required: true
-      - name: SpecificFontFilename
+      - name: specificFontFilename
         label: Specific Font File Name ( with extention e.g. inter-regular.tff )
         type: string
         required: true
