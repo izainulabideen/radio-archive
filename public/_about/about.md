@@ -1,5 +1,6 @@
 ---
 title: About Us
+heroImage: /assets/about-us-BsjngSIW.jpg
 content: >-
   <h2 style="text-align: center"><strong>Our Mission</strong></h2><p
   style="text-align: center">At Radio Archive, we are revolutionizing the way
