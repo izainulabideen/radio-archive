@@ -182,7 +182,7 @@ content:
               { name: url, label: URL, type: string },
             ],
         }
-  
+
   # Demo Section (shared across pages)
   - name: demo
     label: Demo
@@ -190,8 +190,17 @@ content:
     path: public/_common/demo.md
     fields:
       - { name: demoHeading, label: Demo Heading, type: string }
-      - { name: firstVideo, label: First Video (URL), type: string }
-      - { name: secondVideo, label: Second Video (URL), type: string }
+      - {
+          name: videoList,
+          label: Video List,
+          type: object,
+          list: true,
+          fields:
+            [
+              { name: firstVideo, label: First Video (URL), type: string },
+              { name: secondVideo, label: Second Video (URL), type: string },
+            ],
+        }
 
     # Contact Section (shared across pages)
   - name: contact
