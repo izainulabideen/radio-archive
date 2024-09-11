@@ -170,6 +170,7 @@ content:
       - { name: emailHeading, label: Email Heading, type: string }
       - { name: email, label: Email, type: string }
       - { name: copyright, label: Copyright, type: string }
+      - { name: navigationHeading, label: Navigation Heading, type: string }
       - {
           name: naviagtion,
           label: Navigation,
