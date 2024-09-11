@@ -172,7 +172,7 @@ content:
       - { name: copyright, label: Copyright, type: string }
       - { name: navigationHeading, label: Navigation Heading, type: string }
       - {
-          name: naviagtion,
+          name: navigation,
           label: Navigation,
           type: object,
           list: true,
