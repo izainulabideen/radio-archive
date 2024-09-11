@@ -1,18 +1,32 @@
 import { logo } from "../assets/images";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProductMenu from "./menu/Product";
 import { Link } from "react-router-dom";
+import { getHeaderData } from "../lib/header";
+import { Header as HeaderProps } from "../interfaces/header";
+import { getImageSrc } from "../lib/set-image-src";
 
 function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const pathname = window.location.pathname || "/";
+  const [data, setData] = useState<HeaderProps>();
+
+  useEffect(() => {
+    (async () => {
+      const data = await getHeaderData();
+      if (data) {
+        setData(data);
+      }
+    })();
+  }, []);
+  console.log(data);
 
   return (
     <header className="flex bg-color1 min-h-[70px] tracking-wide relative z-50">
       <div className="flex flex-wrap items-center justify-between px-4 md:px-10 py-3 gap-4 w-full">
         <Link to="/">
           <img
-            src={logo}
+            src={getImageSrc(data?.logo!, logo)}
             alt="logo"
             height={200}
             width={200}
@@ -53,7 +67,7 @@ function Header() {
             >
               <Link to="/">
                 <img
-                  src={logo}
+                  src={getImageSrc(data?.logo!, logo)}
                   alt="logo"
                   height={70}
                   width={120}
@@ -61,47 +75,40 @@ function Header() {
                 />
               </Link>
             </li>
-            <li
-              className="max-lg:border-b max-lg:py-3"
-              onClick={() => setOpenMenu(false)}
-            >
-              <Link
-                to="/"
-                className={`hover:text-opacity-80 text-color2 text-sm ${
-                  pathname === "/" ? "font-bold" : ""
-                } block`}
-              >
-                Home
-              </Link>
-            </li>
-            <ProductMenu
-              pathname={pathname}
-              handleMenu={() => setOpenMenu(false)}
-            />
-            <li
-              className="max-lg:border-b max-lg:py-3"
-              onClick={() => setOpenMenu(false)}
-            >
-              <Link
-                to="/about"
-                className={`hover:text-opacity-80 text-color2 text-sm ${
-                  pathname === "/about" ? "font-bold" : ""
-                } block`}
-              >
-                About
-              </Link>
-            </li>
+            {data?.menu?.map((item) => {
+              return item.linkText === "Product" ? (
+                <ProductMenu
+                  pathname={pathname}
+                  handleMenu={() => setOpenMenu(false)}
+                />
+              ) : (
+                <li
+                  className="max-lg:border-b max-lg:py-3"
+                  onClick={() => setOpenMenu(false)}
+                >
+                  <Link
+                    to={item.url}
+                    className={`hover:text-opacity-80 text-color2 text-sm ${
+                      pathname === item.url ? "font-bold" : ""
+                    } block`}
+                  >
+                    {item.linkText}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
 
         <div className="flex items-center space-x-8 max-lg:ml-auto">
-          <Link to="mailto:admin@radio-archive.org">
-            <span className="flex text-sm uppercase justify-start items-center gap-2">
-              <span className="w-3 h-3 bg-white block rounded-full"></span>
-              Get In Touch
-            </span>
-          </Link>
-
+          {data?.rightMenu?.map((item) => (
+            <Link to={item.url}>
+              <span className="flex text-sm uppercase justify-start items-center gap-2">
+                <span className="w-3 h-3 bg-white block rounded-full"></span>
+                {item.linkText}
+              </span>
+            </Link>
+          ))}
           <button
             id="toggleOpen"
             className="lg:hidden fill-color2"

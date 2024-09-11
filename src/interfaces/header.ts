@@ -1,8 +1,12 @@
 export interface Header {
-    logo: string;
-    menu: {
-      linkText: string;
-      url: string;
-    }[];
-  }
-  
+  content: string;
+  logo: string;
+  menu: {
+    linkText: string;
+    url: string;
+  }[];
+  rightMenu: {
+    linkText: string;
+    url: string;
+  }[];
+}

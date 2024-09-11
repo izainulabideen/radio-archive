@@ -3,6 +3,7 @@ import { GoArrowDownRight } from "react-icons/go";
 import { scrollToSection } from "../lib/scroll";
 import { useFontConfig } from "../context/FontProvider";
 import { getImageSrc } from "../lib/set-image-src";
+import Content from "./Content";
 
 function OurMission(data: {
   data: {
@@ -44,7 +45,8 @@ function OurMission(data: {
               "A Time Machine For Radio"}
           </h2>
           <p className="text-sm leading-relaxed">
-            {data?.data?.missionDetails?.missionContent &&
+            <Content data={data?.data?.missionDetails?.missionContent} />
+            {!data?.data?.missionDetails?.missionContent &&
               "Imagine having the power to tune into any AM or FM channel, not just live, but at any moment from the past decade. With our groundbreaking technology, you can shift through time by adjusting the year, month, day, hour, and minute, all while staying on your chosen channel. Need to find a specific moment? Perform a text search across years of broadcasts to instantly locate and play back any phrase from programs, advertisements, or news."}
           </p>
           <div className="mt-8 flex max-sm:flex-col text-center sm:space-x-4 max-sm:space-y-6">
@@ -63,7 +65,10 @@ function OurMission(data: {
         <div className="flex-[2] grid sm:grid-cols-2 gap-8 max-md:max-w-lg mx-auto">
           <div className="rounded-2xl">
             <img
-              src={getImageSrc(data?.data?.missionDetails?.missionImage1, mission1)}
+              src={getImageSrc(
+                data?.data?.missionDetails?.missionImage1,
+                mission1
+              )}
               alt="Mission 1"
               width={200}
               height={200}
@@ -73,7 +78,10 @@ function OurMission(data: {
 
           <div className="rounded-2xl">
             <img
-              src={getImageSrc(data?.data?.missionDetails?.missionImage2, mission2)}
+              src={getImageSrc(
+                data?.data?.missionDetails?.missionImage2,
+                mission2
+              )}
               alt="Mission 2"
               width={200}
               height={200}
